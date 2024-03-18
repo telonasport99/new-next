@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import {NextPageWithLayout} from './_app';
+import {NextPageWithLayout} from 'pages/_app';
 import {PageWrapper} from 'components/PageWrapper/PageWrapper';
-import {getLayout} from 'components/Layout/BaseLayout/BaseLayout';
 
 const Home: NextPageWithLayout = () => (
     <PageWrapper>
@@ -14,6 +13,5 @@ const Home: NextPageWithLayout = () => (
         />
     </PageWrapper>
 );
+export default Home
 
-Home.getLayout = getLayout
-export default Home;

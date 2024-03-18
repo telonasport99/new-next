@@ -1,6 +1,6 @@
+'use client'
 import {PageWrapper} from 'components/PageWrapper/PageWrapper';
 import {Card} from 'components/Card/Card';
-import {getLayout} from 'components/Layout/BaseLayout/BaseLayout';
 import {useEffect, useState} from 'react';
 import {API} from 'assets/api/api';
 import {LocationType} from 'assets/api/rick-and-morty-api';
@@ -26,5 +26,4 @@ const Locations = () => {
     )
 }
 
-Locations.getLayout = getLayout
 export default Locations
