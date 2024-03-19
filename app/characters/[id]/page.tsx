@@ -2,6 +2,7 @@ import {CharacterType, ResponseType} from 'assets/api/rick-and-morty-api';
 import {PageWrapper} from 'components/PageWrapper/PageWrapper';
 import s from 'styles/styles.module.css'
 import process from "process";
+import {Metadata} from "next";
 
 
 
@@ -14,7 +15,10 @@ export async function generateStaticParams(){
     const {results} = await getCharacters()
     return results.map((character=>({id: String(character.id)})))
 }
-
+export async function  generateMetadata({params}:{params:{id:string}}):Promise<Metadata>{
+   return { title:params.id,
+    description:'New NextJs'
+}}
 const Character = ({params}:{params:{id:string}}) => {
     return (
         <PageWrapper>
